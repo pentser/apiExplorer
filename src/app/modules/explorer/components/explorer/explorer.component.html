@@ -1,0 +1,17 @@
+<header>
+  <h1>API Explorer</h1>
+  <ae-search (title$)="getEntriesByTitle($event)"></ae-search>
+</header>
+<section>
+  <nav>
+    <ae-filter
+               [categories]="categoriesList"
+               (protocol$)="filterBy('protocol', $event)"
+               (category$)="filterBy('category', $event)"
+    ></ae-filter>
+  </nav>
+  <main>
+    <ae-entries [entries]="entries"></ae-entries>
+  </main>
+</section>
+
