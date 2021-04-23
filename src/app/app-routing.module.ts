@@ -4,12 +4,12 @@ import { AppComponent } from './app.component';
 
 
 const routes: Routes = [
-
+/*
   {
     path:'',
     component:AppComponent,
     pathMatch: 'full'
-  },
+  }, */
   {
     path:"about",
     loadChildren:()=>import('./modules/about/about.module').then(m=>m.AboutModule)
